@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+  background: #f8f9fa;
+}
+
+header {
+  background: #0a2540;
+  color: #fff;
+  padding: 1em 2em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #3ba4ff;
+}
+
+.hero {
+  background: linear-gradient(135deg, #007bff, #00c2ff);
+  color: white;
+  padding: 5em 2em;
+  text-align: center;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 1em;
+  background: #fff;
+  color: #007bff;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 300px;
+}
+
+footer {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
