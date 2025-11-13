@@ -5,22 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Miratech Software Consulting</title>
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Optional: Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1 class="logo">Miratech</h1>
-      <ul>
+  <header class="header">
+    <nav class="nav container">
+      <h1 class="logo"><a href="index.html">Miratech</a></h1>
+
+      <!-- Desktop menu -->
+      <ul class="nav-list">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" aria-label="Open menu">Menu</button>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-content container">
       <h2>Building Smart Digital Solutions</h2>
       <p>Miratech Software Consulting helps businesses accelerate innovation through custom web, mobile, and cloud solutions.</p>
       <a href="#contact" class="btn">Get in Touch</a>
@@ -28,31 +35,37 @@
   </section>
 
   <section id="services" class="section">
-    <h3>Our Services</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>Web Development</h4>
-        <p>Modern, scalable web applications tailored to your needs.</p>
-      </div>
-      <div class="card">
-        <h4>Cloud Solutions</h4>
-        <p>Deploy and manage cloud infrastructure that grows with your business.</p>
-      </div>
-      <div class="card">
-        <h4>Software Consulting</h4>
-        <p>Guiding you through every step of your digital transformation.</p>
+    <div class="container">
+      <h3>Our Services</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>Web Development</h4>
+          <p>Modern, scalable web applications tailored to your needs.</p>
+        </div>
+        <div class="card">
+          <h4>Cloud Solutions</h4>
+          <p>Deploy and manage cloud infrastructure that grows with your business.</p>
+        </div>
+        <div class="card">
+          <h4>Software Consulting</h4>
+          <p>Guiding you through every step of your digital transformation.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact" class="section contact">
-    <h3>Contact Us</h3>
-    <p>Email: <a href="mailto:miratech.software.consulting@gmail.com">miratech.software.consulting@gmail.com</a></p>
-    <p>Phone: +212 6 36 32 48 49</p>
+    <div class="container">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:miratech.software.consulting@gmail.com">miratech.software.consulting@gmail.com</a></p>
+      <p>Phone: +212 6 36 32 48 49</p>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Miratech Software Consulting. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Miratech Software Consulting. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
