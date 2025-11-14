@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Miratech Software Consulting</title>
+  <title>Miratech Software Consulting</title>
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Optional: Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1 class="logo">Miratech</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+  <header class="header">
+    <nav class="nav container">
+      <h1 class="logo"><a href="index.html">Miratech</a></h1>
+
+      <!-- Desktop menu -->
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Home</a></li>
       </ul>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" aria-label="Open menu">Menu</button>
     </nav>
   </header>
 
