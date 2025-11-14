@@ -1,31 +1,36 @@
-// Mobile menu toggle
 document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
+  const toggle   = document.querySelector('.nav-toggle');
+  const navList  = document.querySelector('.nav-list');
 
   if (!toggle || !navList) return;
 
-  // Toggle menu
   toggle.addEventListener('click', () => {
     const isOpen = navList.classList.toggle('open');
+
+    // 1. Change button text
     toggle.textContent = isOpen ? 'Close' : 'Menu';
     toggle.setAttribute('aria-expanded', isOpen);
+
+    // 2. Add/remove .menu-open on <body>
+    document.body.classList.toggle('menu-open', isOpen);
   });
 
-  // Close when clicking a link
+  // Close when a link is clicked
   document.querySelectorAll('.nav-list a').forEach(link => {
     link.addEventListener('click', () => {
       navList.classList.remove('open');
       toggle.textContent = 'Menu';
       toggle.setAttribute('aria-expanded', false);
+      document.body.classList.remove('menu-open');
     });
   });
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
+  // Close when clicking outside
+  document.addEventListener('click', e => {
     if (!toggle.contains(e.target) && !navList.contains(e.target)) {
       navList.classList.remove('open');
       toggle.textContent = 'Menu';
+      document.body.classList.remove('menu-open');
     }
   });
 });

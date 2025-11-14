@@ -165,59 +165,181 @@ body {
 
   .hero { padding: 4rem 0; }
 }
-
 /* -------------------------------------------------
    Mobile: Menu drops down UNDER the header
    ------------------------------------------------- */
 @media (max-width: 768px) {
   .nav-toggle { display: block; }
 
-  /* Menu container – positioned under header */
   .nav-list {
     position: absolute;
-    top: 100%;           /* Starts right below header */
-    left: 0;
-    right: 0;
+    top: 100%;                 /* right below header */
+    left: 0; right: 0;
     background: #0a2540;
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: max-height .35s ease, padding .35s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
     z-index: 999;
   }
 
-  /* Open state */
   .nav-list.open {
-    max-height: 400px;
+    max-height: 266px;        /* enough for all items */
     padding: 1rem 0;
   }
 
-  .nav-list li {
+  /* -------------------------------------------------
+     NEW – push the page down when the menu is open
+     ------------------------------------------------- */
+  body.menu-open {
+    overflow: hidden;         /* prevent scroll while menu is open */
+  }
+  body.menu-open .hero {
+    margin-top: 266px;        /* same as .nav-list.open max-height */
+    transition: margin-top .35s ease;
+  }
+
+  /* -------------------------------------------------
+     NEW – hide the floating blue block while menu is open
+     ------------------------------------------------- */
+  body.menu-open .hero .btn {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+  }
+}
+
+/* keep the original .hero margin-top transition for the closed state */
+.hero {
+  transition: margin-top .35s ease;
+}
+
+/* -------------------------------------------------
+   ABOUT PAGE – reuse everything from the main site
+   ------------------------------------------------- */
+.about {
+  padding: 4rem 0;
+  text-align: center;
+  background: #fff;
+}
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #0a2540;
+}
+.about p,
+.about ul {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+}
+.about h3 {
+  font-size: 1.6rem;
+  margin: 2rem 0 1rem;
+  color: #007bff;
+}
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+.about li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: .6rem;
+}
+.about li::before {
+  content: "Checkmark";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------
+   RE-USE HEADER / NAV / FOOTER from index.html
+   ------------------------------------------------- */
+header {               /* same as .header in index */
+  background: #0a2540;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+.logo {                /* same as .logo a */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .3s;
+}
+nav a:hover,
+nav a.active { color: #3ba4ff; }
+
+/* -------------------------------------------------
+   MOBILE MENU – copy the exact rules from index.html
+   ------------------------------------------------- */
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: #0a2540;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease, padding .35s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    z-index: 999;
+  }
+  nav ul.open {
+    max-height: 400px;
+    padding: 1rem 0;
+  }
+  nav li {
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
   }
+  nav li:last-child { border-bottom: none; }
+  nav a { display: block; padding: 1rem; font-size: 1.1rem; }
 
-  .nav-list li:last-child { border-bottom: none; }
+  /* push page down when menu open */
+  body.menu-open .about { margin-top: 400px; transition: margin-top .35s ease; }
+  body.menu-open { overflow: hidden; }
+}
 
-  .nav-list a {
-    display: block;
-    padding: 1rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-
-  .nav-list a:active { background: rgba(255,255,255,0.1); }
-
-  /* Push hero down when menu is open */
-  .hero {
-    margin-top: 0;
-    transition: margin-top 0.35s ease;
-  }
-
-  /* Optional: add space when menu is open */
-  body.menu-open .hero {
-    margin-top: 400px; /* matches max-height of menu */
-  }
+/* -------------------------------------------------
+   FOOTER – same as index
+   ------------------------------------------------- */
+footer {
+  background: #0a2540;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: .9rem;
 }
