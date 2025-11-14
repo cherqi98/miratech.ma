@@ -343,3 +343,7 @@ footer {
   padding: 1.5rem 0;
   font-size: .9rem;
 }
+
+.about li::before {
+content: none !important;
+}
