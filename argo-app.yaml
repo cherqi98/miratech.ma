@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_USER/k8s-windows-lab.git
+    repoURL: https://github.com/cherqi98/miratech.ma
     targetRevision: main
     path: .
   destination:
