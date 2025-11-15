@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miratech
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: miratech
+  template:
+    metadata:
+      labels:
+        app: miratech
+    spec:
+      containers:
+      - name: nginx
+        image: aladin98/miratech:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: miratech-service
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30007
+  selector:
+    app: miratech
+
+    
