@@ -22,7 +22,11 @@ spec:
     spec:
       containers:
         - name: nginx
+<<<<<<< Updated upstream
           image: ghcr.io/cherqi98/miratech:20251116-1ffc022
+=======
+          image: ghcr.io/cherqi98/miratech:20251115-5374d6e
+>>>>>>> Stashed changes
           ports:
             - containerPort: 80
           resources:
