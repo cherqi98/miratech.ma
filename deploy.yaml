@@ -23,9 +23,9 @@ spec:
       containers:
         - name: nginx
 <<<<<<< Updated upstream
-          image: ghcr.io/cherqi98/miratech:20251116-1ffc022
+          image: ghcr.io/cherqi98/miratech:20251116-0aa20a5
 =======
-          image: ghcr.io/cherqi98/miratech:20251115-5374d6e
+          image: ghcr.io/cherqi98/miratech:20251116-0aa20a5
 >>>>>>> Stashed changes
           ports:
             - containerPort: 80
