@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: ghcr.io/${{ github.repository_owner }}/miratech:placeholder   # ← CI will replace
+          image: ghcr.io/cherqi98/miratech:20251115-5374d6e
           ports:
             - containerPort: 80
           resources:
