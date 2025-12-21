@@ -3,17 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="about_meta_title">About Us | AI Integration Experts | MiraTech</title>
   
-  <!-- SEO Meta Tags -->
-  <title>About Us | AI Integration Experts | MiraTech Software Consulting</title>
-  <meta name="description" content="Learn about MiraTech's experienced AI integration specialists. We help businesses safely implement AI assistants with security-first approach and proven expertise." />
-  <meta name="keywords" content="AI integration experts, AI consulting team, secure AI implementation, experienced AI specialists" />
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="About MiraTech AI Integration Services" />
-  <meta property="og:description" content="Meet the team behind secure AI integration. Expert specialists helping businesses implement AI safely." />
-  
-  <link rel="canonical" href="https://miratech.ma" />
+  <link rel="icon" type="image/png" href="assets/logo.png">
   
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,64 +13,56 @@
 <body>
   <header class="header">
     <nav class="nav container">
-      <h1 class="logo"><a href="index.html">MiraTech AI</a></h1>
+      <h1 class="logo">
+        <a href="index.html" style="display: flex; align-items: center; gap: 0rem;">
+          <img src="assets/logo.png" alt="MiraTech Logo" style="height: 50px; width: auto;">
+          <span>MiraTech</span>
+        </a>
+      </h1>
       <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+        <li><a href="about.html" id="nav-about">About</a></li>
+        <li><a href="#services" id="nav-services">Services</a></li>
+        <li><a href="#why-us" id="nav-why-us">Why Us</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
       </ul>
+      <div class="lang-switcher">
+        <button onclick="changeLang('en')" id="btn-en" class="lang-btn active">EN</button>
+        <button onclick="changeLang('fr')" id="id-fr" class="lang-btn">FR</button>
+      </div>
       <button class="nav-toggle" aria-label="Open menu">Menu</button>
     </nav>
   </header>
 
-  <section class="section about">
-    <h2>About MiraTech AI Integration</h2>
-    <p>MiraTech Software Consulting specializes in <strong>secure AI integration</strong> for enterprise software. We help companies harness the power of artificial intelligence while maintaining the highest standards of data security, privacy, and compliance.</p>
+  <section class="section about container">
+    <h2 data-i18n="about_title">About MiraTech AI Integration</h2>
+    <p data-i18n="about_intro">MiraTech Software Consulting specializes in secure AI integration for enterprise software. We help companies harness the power of artificial intelligence while maintaining the highest standards of data security, privacy, and compliance.</p>
 
-    <h3>Our Mission</h3>
-    <p>To empower businesses with safe, effective AI solutions that drive innovation without compromising security. We bridge the gap between cutting-edge AI technology and enterprise-grade implementation.</p>
+    <h3 data-i18n="mission_title">Our Mission</h3>
+    <p data-i18n="mission_desc">To empower businesses with safe, effective AI solutions that drive innovation without compromising security. We bridge the gap between cutting-edge AI technology and enterprise-grade implementation.</p>
 
-    <h3>Why AI Integration Requires Expertise</h3>
-    <p>Integrating AI into existing software isn't just about connecting APIs. It requires deep understanding of:</p>
+    <h3 data-i18n="expertise_title">Why AI Integration Requires Expertise</h3>
+    <p data-i18n="expertise_intro">Integrating AI into existing software isn't just about connecting APIs. It requires deep understanding of:</p>
     <ul>
-      <li><strong>Security Architecture:</strong> Protecting sensitive data while leveraging AI capabilities</li>
-      <li><strong>Compliance Standards:</strong> Ensuring GDPR, HIPAA, and industry-specific regulations are met</li>
-      <li><strong>System Integration:</strong> Seamlessly connecting AI with your existing infrastructure</li>
-      <li><strong>Performance Optimization:</strong> Balancing AI power with system efficiency and cost</li>
-      <li><strong>Risk Management:</strong> Identifying and mitigating AI-specific security vulnerabilities</li>
+      <li data-i18n="exp_1"><strong>Security Architecture:</strong> Protecting sensitive data while leveraging AI capabilities</li>
+      <li data-i18n="exp_2"><strong>Compliance Standards:</strong> Ensuring GDPR, HIPAA, and industry-specific regulations are met</li>
+      <li data-i18n="exp_3"><strong>System Integration:</strong> Seamlessly connecting AI with your existing infrastructure</li>
+      <li data-i18n="exp_4"><strong>Performance Optimization:</strong> Balancing AI power with system efficiency and cost</li>
+      <li data-i18n="exp_5"><strong>Risk Management:</strong> Identifying and mitigating AI-specific security vulnerabilities</li>
     </ul>
 
-    <h3>Our Approach to Safe AI Integration</h3>
-    <p>We follow a rigorous methodology that prioritizes security at every step:</p>
-    <ul>
-      <li><strong>Security Assessment:</strong> Evaluate your current infrastructure and identify potential risks</li>
-      <li><strong>Custom Architecture:</strong> Design AI integration that fits your security requirements</li>
-      <li><strong>Secure Implementation:</strong> Deploy with encryption, access controls, and monitoring</li>
-      <li><strong>Compliance Verification:</strong> Ensure all regulations and standards are met</li>
-      <li><strong>Ongoing Support:</strong> Monitor, update, and optimize your AI systems</li>
-    </ul>
-
-    <h3>Our Core Values</h3>
-    <ul>
-      <li><strong>Security First:</strong> Every AI integration prioritizes data protection and privacy</li>
-      <li><strong>Transparency:</strong> Clear communication about capabilities, limitations, and risks</li>
-      <li><strong>Excellence:</strong> Delivering production-ready solutions that work reliably</li>
-      <li><strong>Partnership:</strong> Working closely with your team to ensure long-term success</li>
-    </ul>
-
-    <h3>Industries We Serve</h3>
-    <p>Our AI integration expertise spans multiple sectors including healthcare, finance, e-commerce, SaaS, education, and professional services. Each implementation is customized to meet industry-specific compliance and security requirements.</p>
+    <h3 data-i18n="industries_title">Industries We Serve</h3>
+    <p data-i18n="industries_desc">Our AI integration expertise spans multiple sectors including healthcare, finance, e-commerce, SaaS, education, and professional services. Each implementation is customized to meet industry-specific compliance and security requirements.</p>
 
     <div style="margin-top: 3rem; padding: 2rem; background: #f0f7ff; border-radius: .8rem;">
-      <h3 style="margin-top: 0;">Ready to Discuss Your AI Integration Project?</h3>
-      <p style="margin-bottom: 1.5rem;">Let's talk about how we can safely integrate AI into your software. Contact us for a free consultation.</p>
-      <a href="index.html#contact" class="btn">Get in Touch</a>
+      <h3 style="margin-top: 0;" data-i18n="about_cta_title">Ready to Discuss Your AI Integration Project?</h3>
+      <p style="margin-bottom: 1.5rem;" data-i18n="about_cta_desc">Let's talk about how we can safely integrate AI into your software. Contact us for a free consultation.</p>
+      <a href="index.html#contact" class="btn" data-i18n="about_cta_btn">Get in Touch</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 MiraTech Software Consulting. All rights reserved. | AI Integration Specialists</p>
+    <p data-i18n="footer_rights">© 2025 MiraTech Software Consulting. All rights reserved. | AI Integration Specialists</p>
   </footer>
 
   <script src="js/main.js"></script>

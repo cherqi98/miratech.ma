@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="language" content="French, English">
+  <link rel="alternate" hreflang="fr" href="https://miratech.ma/index.html" />
+  <link rel="alternate" hreflang="en" href="https://miratech.ma/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://miratech.ma/index.html" />
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+
   
   <!-- SEO Meta Tags -->
-  <title>AI Integration Services | Secure AI Assistant Implementation | MiraTech</title>
-  <meta name="description" content="Expert AI integration services for businesses. We help companies safely implement AI assistants and machine learning solutions with experienced specialists. Custom AI development for your software." />
+  <title>Intégration IA & Assistant Intelligent au Maroc | MiraTech</title>
+  <meta name="description" content="Expert en intégration d'IA au Maroc. Nous aidons les entreprises à implémenter des assistants IA sécurisés et des solutions de machine learning sur mesure." />
   <meta name="keywords" content="AI integration, AI assistant implementation, machine learning integration, secure AI development, enterprise AI solutions, custom AI software, AI consulting" />
   <meta name="author" content="MiraTech Software Consulting" />
   
@@ -24,23 +36,40 @@
   
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MiraTech Software Consulting",
-    "description": "AI Integration and Software Consulting Services",
-    "url": "https://miratech.ma",
-    "telephone": "+212-6-36-32-48-49",
-    "email": "miratech.software.consulting@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "MA"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MiraTech Software Consulting",
+      "description": "AI Integration and Software Consulting Services",
+      "url": "https://miratech.ma",
+      "telephone": "+212-6-36-32-48-49",
+      "email": "contact@miratech.ma",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fes",
+        "addressCountry": "MA"
+      }
     },
-    "sameAs": [
-      "https://linkedin.com/company/yourcompany"
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Intégration d'Intelligence Artificielle",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "MiraTech",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fes",
+          "addressCountry": "MA"
+        }
+      },
+      "description": "Expertise en intégration d'IA et assistants intelligents pour sites web et logiciels au Maroc."
+    }
+  ]
   </script>
+
+  
 </head>
 <body>
   <header class="header">
@@ -52,75 +81,95 @@
         </a>
       </h1>
       <ul class="nav-list">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#why-us">Why Us</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+        <li><a href="about.html" id="nav-about">About</a></li>
+        <li><a href="#services" id="nav-services">Services</a></li>
+        <li><a href="#why-us" id="nav-why-us">Why Us</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
       </ul>
+      <div class="lang-switcher">
+        <button onclick="changeLang('en')" id="btn-en" class="lang-btn active">EN</button>
+        <button onclick="changeLang('fr')" id="id-fr" class="lang-btn">FR</button>
+      </div>
       <button class="nav-toggle" aria-label="Open menu">Menu</button>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-content container">
-      <h2>Secure AI Integration for Your Business Software</h2>
-      <p>Transform your applications with enterprise-grade AI assistants. Our experienced specialists ensure safe, compliant, and powerful AI implementation tailored to your needs.</p>
-      <a href="#contact" class="btn">Start Your AI Journey</a>
+      <h2 data-i18n="hero_title">Secure AI Integration for Your Business Software</h2>
+      
+      <p data-i18n="hero_desc">Transform your applications with enterprise-grade AI assistants. Our experienced specialists ensure safe, compliant, and powerful AI implementation tailored to your needs.</p>
+      
+      <a href="#contact" class="btn" data-i18n="hero_btn">Start Your AI Journey</a>
     </div>
   </section>
 
   <section id="services" class="section">
     <div class="container">
-      <h3>Our AI Integration Services</h3>
+      <h3 data-i18n="services_main_title">Our AI Integration Services</h3>
       <div class="cards">
         <div class="card">
-          <h4>AI Assistant Integration</h4>
-          <p>Seamlessly embed intelligent AI assistants into your existing software. We implement ChatGPT, Claude, and custom LLM solutions with enterprise security.</p>
+          <h4 data-i18n="service_1_title">AI Assistant Integration</h4>
+          <p data-i18n="service_1_desc">Seamlessly embed intelligent AI assistants into your existing software. We implement ChatGPT, Claude, and custom LLM solutions with enterprise security.</p>
         </div>
         <div class="card">
-          <h4>Secure AI Implementation</h4>
-          <p>Safety-first approach with data privacy, compliance monitoring, and secure API integration. GDPR and industry-standard compliant solutions.</p>
+          <h4 data-i18n="service_2_title">Secure AI Implementation</h4>
+          <p data-i18n="service_2_desc">Safety-first approach with data privacy, compliance monitoring, and secure API integration. GDPR and industry-standard compliant solutions.</p>
         </div>
         <div class="card">
-          <h4>Custom AI Development</h4>
-          <p>Build bespoke AI features for your software. From natural language processing to intelligent automation and predictive analytics.</p>
+          <h4 data-i18n="service_3_title">Custom AI Development</h4>
+          <p data-i18n="service_3_desc">Build bespoke AI features for your software. From natural language processing to intelligent automation and predictive analytics.</p>
         </div>
         <div class="card">
-          <h4>AI Strategy Consulting</h4>
-          <p>Expert guidance on AI adoption. We assess your needs, design AI architecture, and create implementation roadmaps for maximum ROI.</p>
+          <h4 data-i18n="service_4_title">AI Strategy Consulting</h4>
+          <p data-i18n="service_4_desc">Expert guidance on AI adoption. We assess your needs, design AI architecture, and create implementation roadmaps for maximum ROI.</p>
         </div>
         <div class="card">
-          <h4>Machine Learning Integration</h4>
-          <p>Integrate ML models for data analysis, pattern recognition, and automated decision-making. From proof-of-concept to production deployment.</p>
+          <h4 data-i18n="service_5_title">Machine Learning Integration</h4>
+          <p data-i18n="service_5_desc">Integrate ML models for data analysis, pattern recognition, and automated decision-making. From proof-of-concept to production deployment.</p>
         </div>
         <div class="card">
-          <h4>AI Training & Support</h4>
-          <p>Comprehensive training for your team on AI tools and best practices. Ongoing support to optimize and scale your AI solutions.</p>
+          <h4 data-i18n="service_6_title">AI Training & Support</h4>
+          <p data-i18n="service_6_desc">Comprehensive training for your team on AI tools and best practices. Ongoing support to optimize and scale your AI solutions.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq container">
+    <h3 data-i18n="faq_title">Questions fréquentes sur l'intégration d'IA</h3>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4 data-i18n="faq_q1">Comment intégrer l'IA dans mon site web au Maroc ?</h4>
+        <p data-i18n="faq_a1">L'intégration se fait via des API sécurisées ou des modèles personnalisés. MiraTech vous accompagne dans le choix de la solution la plus adaptée à votre infrastructure locale.</p>
+      </div>
+      <div class="faq-item">
+        <h4 data-i18n="faq_q2">Quel est le coût d'un assistant IA pour entreprise ?</h4>
+        <p data-i18n="faq_a2">Le coût dépend de la complexité. Nous proposons des solutions sur mesure allant du simple chatbot à l'intégration complète de LLM sécurisés.</p>
       </div>
     </div>
   </section>
 
   <section id="why-us" class="section" style="background: #fff;">
     <div class="container">
-      <h3>Why Choose MiraTech for AI Integration?</h3>
+      <h3 data-i18n="why_us_title">Why Choose MiraTech for AI Integration?</h3>
       <div class="cards">
         <div class="card">
-          <h4>🛡️ Security-First Approach</h4>
-          <p>We prioritize data protection and implement AI with enterprise-grade security protocols, ensuring your sensitive information stays protected.</p>
+          <h4 data-i18n="why_1_title">🛡️ Security-First Approach</h4>
+          <p data-i18n="why_1_desc">We prioritize data protection and implement AI with enterprise-grade security protocols, ensuring your sensitive information stays protected.</p>
         </div>
         <div class="card">
-          <h4>👨‍💻 Experienced Specialists</h4>
-          <p>Our team has deep expertise in AI technologies, software architecture, and secure integration practices across multiple industries.</p>
+          <h4 data-i18n="why_2_title">👨‍💻 Experienced Specialists</h4>
+          <p data-i18n="why_2_desc">Our team has deep expertise in AI technologies, software architecture, and secure integration practices across multiple industries.</p>
         </div>
         <div class="card">
-          <h4>⚡ Proven Implementation</h4>
-          <p>We follow industry best practices and proven methodologies to deliver AI solutions that work reliably in production environments.</p>
+          <h4 data-i18n="why_3_title">⚡ Proven Implementation</h4>
+          <p data-i18n="why_3_desc">We follow industry best practices and proven methodologies to deliver AI solutions that work reliably in production environments.</p>
         </div>
         <div class="card">
-          <h4>🔧 Full-Stack Integration</h4>
-          <p>From frontend chatbots to backend AI processing, we handle every aspect of AI integration in your software ecosystem.</p>
+          <h4 data-i18n="why_4_title">🔧 Full-Stack Integration</h4>
+          <p data-i18n="why_4_desc">From frontend chatbots to backend AI processing, we handle every aspect of AI integration in your software ecosystem.</p>
         </div>
       </div>
     </div>
@@ -128,24 +177,47 @@
 
   <section class="section" style="background: linear-gradient(135deg, #0a2540, #1a4060); color: #fff;">
     <div class="container">
-      <h3 style="color: #fff;">Ready to Integrate AI Into Your Software?</h3>
-      <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;">Let's discuss how AI can transform your business. Our specialists will assess your needs and design a secure implementation plan.</p>
-      <a href="#contact" class="btn">Schedule a Free Consultation</a>
+      <h3 style="color: #fff;" data-i18n="cta_title">Ready to Integrate AI Into Your Software?</h3>
+      <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;" data-i18n="cta_desc">
+        Let's discuss how AI can transform your business. Our specialists will assess your needs and design a secure implementation plan.
+      </p>
+      <a href="#contact" class="btn" data-i18n="cta_btn">Schedule a Free Consultation</a>
     </div>
   </section>
 
   <section id="contact" class="section contact">
-    <div class="container">
-      <h3>Contact Our AI Integration Specialists</h3>
-      <p>Email: <a href="mailto:miratech.software.consulting@gmail.com">miratech.software.consulting@gmail.com</a></p>
-      <p>Phone: <a href="tel:+212636324849">+212 6 36 32 48 49</a></p>
-      <p style="margin-top: 1.5rem; color: #666;">Get a free consultation on integrating AI assistants into your software. We respond within 24 hours.</p>
+      <div class="container">
+        <h3 data-i18n="contact_title">Contact Our AI Integration Specialists</h3>
+        <div class="contact-grid">
+    <a href="mailto:contact@miratech.ma" class="contact-card">
+      <div class="icon-circle">
+        <span class="icon">✉️</span>
+      </div>
+      <div class="card-text">
+        <span class="label" data-i18n="contact_email_label">Send an Email</span>
+        <span class="value">contact@miratech.ma</span>
+      </div>
+    </a>
+
+    <a href="https://wa.me/212636324849" target="_blank" class="contact-card whatsapp-border">
+      <div class="icon-circle whatsapp-bg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24">
+      </div>
+      <div class="card-text">
+        <span class="label" data-i18n="contact_whatsapp_label">Chat on WhatsApp</span>
+        <span class="value">+212 6 36 32 48 49</span>
+      </div>
+    </a>
+  </div>
+      <p style="margin-top: 1.5rem; color: #666;" data-i18n="contact_footer_text">
+        Get a free consultation on integrating AI assistants into your software. We respond within 24 hours.
+      </p>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <p>© 2025 MiraTech Software Consulting. All rights reserved. | AI Integration Specialists</p>
+      <p data-i18n="footer_rights">© 2025 MiraTech Software Consulting. All rights reserved. | AI Integration Specialists</p>
     </div>
   </footer>
 
