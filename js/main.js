@@ -233,7 +233,7 @@ function changeLang(lang) {
     document.querySelector('#services h3').textContent = translations[lang].servicesTitle;
 
     document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    const savedLang = localStorage.getItem('preferredLang') || 'fr';
     changeLang(savedLang);
 });
 }
