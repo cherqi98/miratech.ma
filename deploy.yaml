@@ -22,6 +22,7 @@ spec:
     spec:
       containers:
         - name: nginx
+<<<<<<< HEAD
           image: ghcr.io/cherqi98/miratech:20260831-a7fb1f6
           ports:
             - containerPort: 80
