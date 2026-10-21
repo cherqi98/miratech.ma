@@ -1,42 +1,53 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="language" content="French, English">
 
+  <link rel="alternate" hreflang="fr-ma" href="https://miratech.ma/" />
+  <link rel="alternate" hreflang="fr" href="https://miratech.ma/" />
+  <link rel="alternate" hreflang="en" href="https://miratech.ma/" />
 
-<link rel="alternate" hreflang="fr-ma" href="https://miratech.ma/" />
-<link rel="alternate" hreflang="fr" href="https://miratech.ma/" />
-<link rel="alternate" hreflang="en" href="https://miratech.ma/" />
-
-  <link rel="icon" type="image/png" href="assets/logo.png">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <!-- Brand icons -->
+  <link rel="icon" href="assets/favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="assets/site.webmanifest">
-  <link rel="shortcut icon" href="assets/favicon.ico">
+  <meta name="theme-color" content="#082A52">
 
-  
   <!-- SEO Meta Tags -->
   <title>Intégration IA & Assistant Intelligent au Maroc | MiraTech</title>
   <meta name="description" content="Expert en intégration d'IA au Maroc. Nous aidons les entreprises à implémenter des assistants IA sécurisés et des solutions de machine learning sur mesure." />
   <meta name="keywords" content="AI integration, AI assistant implementation, machine learning integration, secure AI development, enterprise AI solutions, custom AI software, AI consulting" />
   <meta name="author" content="MiraTech Software Consulting" />
-  
+
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="AI Integration Services | Secure AI Implementation | MiraTech" />
   <meta property="og:description" content="Transform your software with secure AI integration. Expert specialists help businesses implement AI assistants safely and effectively." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://miratech.ma" />
-  
+  <meta property="og:site_name" content="MiraTech" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:image" content="https://miratech.ma/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MiraTech Software Consulting logo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://miratech.ma/assets/og-image.png" />
+
   <!-- Canonical URL -->
   <link rel="canonical" href="https://miratech.ma" />
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
+  <link rel="preload" as="image" href="assets/logo-512.webp" type="image/webp">
+
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
   [
@@ -44,15 +55,24 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "MiraTech Software Consulting",
+      "alternateName": ["MiraTech", "MSC"],
       "description": "AI Integration and Software Consulting Services",
       "url": "https://miratech.ma",
       "telephone": "+212-6-36-32-48-49",
       "email": "thwiza@miratech.ma",
       "logo": "https://miratech.ma/assets/logo.png",
+      "image": "https://miratech.ma/assets/og-image.png",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Temara",
         "addressCountry": "MA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+212-6-36-32-48-49",
+        "email": "thwiza@miratech.ma",
+        "contactType": "customer service",
+        "availableLanguage": ["French", "English"]
       }
     },
     {
@@ -72,156 +92,232 @@
     }
   ]
   </script>
-
-  
 </head>
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
   <header class="header">
-    <nav class="nav container">
-      <h1 class="logo">
-        <a href="index.html" style="display: flex; align-items: center; gap: 0rem;">
-          <img src="assets/logo.png" alt="MiraTech Logo" style="height: 50px; width: auto;">
-          <span>MiraTech</span>
-        </a>
-      </h1>
-      <ul class="nav-list">
-        <li><a href="index.html" class="active" id="nav-home">Home</a></li>
-        <li><a href="about.html" id="nav-about">About</a></li>
-        <li><a href="#services" id="nav-services">Services</a></li>
-        <li><a href="#why-us" id="nav-why-us">Why Us</a></li>
-        <li><a href="#contact" id="nav-contact">Contact</a></li>
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="index.html" aria-label="MiraTech – Home">
+        <img src="assets/favicon.svg" alt="" width="42" height="42">
+        <span>Mira<span>Tech</span></span>
+      </a>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="index.html" class="active" aria-current="page" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#why-us" data-i18n="nav_why_us">Why Us</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
-      <div class="lang-switcher">
-        <button onclick="changeLang('en')" id="btn-en" class="lang-btn active">EN</button>
-        <button onclick="changeLang('fr')" id="id-fr" class="lang-btn">FR</button>
+      <div class="lang-switcher" role="group" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
       </div>
-      <button class="nav-toggle" aria-label="Open menu">Menu</button>
+      <button type="button" class="nav-toggle" aria-label="Menu" aria-controls="nav-list" aria-expanded="false">
+        <svg class="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content container">
-      <h2 data-i18n="hero_title">Secure AI Integration for Your Business Software</h2>
-      
-      <p data-i18n="hero_desc">Transform your applications with enterprise-grade AI assistants. Our experienced specialists ensure safe, compliant, and powerful AI implementation tailored to your needs.</p>
-      
-      <a href="#contact" class="btn" data-i18n="hero_btn">Start Your AI Journey</a>
-    </div>
-  </section>
-
-  <section id="services" class="section">
-    <div class="container">
-      <h3 data-i18n="services_main_title">Our AI Integration Services</h3>
-      <div class="cards">
-        <div class="card">
-          <h4 data-i18n="service_1_title">AI Assistant Integration</h4>
-          <p data-i18n="service_1_desc">Seamlessly embed intelligent AI assistants into your existing software. We implement ChatGPT, Claude, and custom LLM solutions with enterprise security.</p>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-content container">
+        <div class="hero-text">
+          <p class="eyebrow" data-i18n="hero_eyebrow">AI Integration · Morocco</p>
+          <h1 data-i18n="hero_title">Secure AI Integration for Your Business Software</h1>
+          <p data-i18n="hero_desc">Transform your applications with enterprise-grade AI assistants. Our experienced specialists ensure safe, compliant, and powerful AI implementation tailored to your needs.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">
+              <span data-i18n="hero_btn">Start Your AI Journey</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="https://wa.me/212636324849" class="btn btn-ghost" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+          <ul class="hero-chips">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="hero_chip_1">Security-first</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="hero_chip_2">GDPR-compliant</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="hero_chip_3">French &amp; English</span></li>
+          </ul>
         </div>
-        <div class="card">
-          <h4 data-i18n="service_2_title">Secure AI Implementation</h4>
-          <p data-i18n="service_2_desc">Safety-first approach with data privacy, compliance monitoring, and secure API integration. GDPR and industry-standard compliant solutions.</p>
-        </div>
-        <div class="card">
-          <h4 data-i18n="service_3_title">Custom AI Development</h4>
-          <p data-i18n="service_3_desc">Build bespoke AI features for your software. From natural language processing to intelligent automation and predictive analytics.</p>
-        </div>
-        <div class="card">
-          <h4 data-i18n="service_4_title">AI Strategy Consulting</h4>
-          <p data-i18n="service_4_desc">Expert guidance on AI adoption. We assess your needs, design AI architecture, and create implementation roadmaps for maximum ROI.</p>
-        </div>
-        <div class="card">
-          <h4 data-i18n="service_5_title">Machine Learning Integration</h4>
-          <p data-i18n="service_5_desc">Integrate ML models for data analysis, pattern recognition, and automated decision-making. From proof-of-concept to production deployment.</p>
-        </div>
-        <div class="card">
-          <h4 data-i18n="service_6_title">AI Training & Support</h4>
-          <p data-i18n="service_6_desc">Comprehensive training for your team on AI tools and best practices. Ongoing support to optimize and scale your AI solutions.</p>
+        <div class="hero-visual">
+          <picture>
+            <source type="image/webp" srcset="assets/logo-512.webp 512w, assets/logo-1024.webp 1024w" sizes="(max-width: 900px) 300px, 420px">
+            <img src="assets/logo.png" alt="MiraTech Software Consulting (MSC) logo" width="512" height="512" fetchpriority="high">
+          </picture>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section faq container">
-    <h3 data-i18n="faq_title">Questions fréquentes sur l'intégration d'IA</h3>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h4 data-i18n="faq_q1">Comment intégrer l'IA dans mon site web au Maroc ?</h4>
-        <p data-i18n="faq_a1">L'intégration se fait via des API sécurisées ou des modèles personnalisés. MiraTech vous accompagne dans le choix de la solution la plus adaptée à votre infrastructure locale.</p>
-      </div>
-      <div class="faq-item">
-        <h4 data-i18n="faq_q2">Quel est le coût d'un assistant IA pour entreprise ?</h4>
-        <p data-i18n="faq_a2">Le coût dépend de la complexité. Nous proposons des solutions sur mesure allant du simple chatbot à l'intégration complète de LLM sécurisés.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="why-us" class="section" style="background: #fff;">
-    <div class="container">
-      <h3 data-i18n="why_us_title">Why Choose MiraTech for AI Integration?</h3>
-      <div class="cards">
-        <div class="card">
-          <h4 data-i18n="why_1_title">🛡️ Security-First Approach</h4>
-          <p data-i18n="why_1_desc">We prioritize data protection and implement AI with enterprise-grade security protocols, ensuring your sensitive information stays protected.</p>
-        </div>
-        <div class="card">
-          <h4 data-i18n="why_2_title">👨‍💻 Experienced Specialists</h4>
-          <p data-i18n="why_2_desc">Our team has deep expertise in AI technologies, software architecture, and secure integration practices across multiple industries.</p>
-        </div>
-        <div class="card">
-          <h4 data-i18n="why_3_title">⚡ Proven Implementation</h4>
-          <p data-i18n="why_3_desc">We follow industry best practices and proven methodologies to deliver AI solutions that work reliably in production environments.</p>
-        </div>
-        <div class="card">
-          <h4 data-i18n="why_4_title">🔧 Full-Stack Integration</h4>
-          <p data-i18n="why_4_desc">From frontend chatbots to backend AI processing, we handle every aspect of AI integration in your software ecosystem.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="background: linear-gradient(135deg, #0a2540, #1a4060); color: #fff;">
-    <div class="container">
-      <h3 style="color: #fff;" data-i18n="cta_title">Ready to Integrate AI Into Your Software?</h3>
-      <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;" data-i18n="cta_desc">
-        Let's discuss how AI can transform your business. Our specialists will assess your needs and design a secure implementation plan.
-      </p>
-      <a href="#contact" class="btn" data-i18n="cta_btn">Schedule a Free Consultation</a>
-    </div>
-  </section>
-
-  <section id="contact" class="section contact">
+    <section id="services" class="section">
       <div class="container">
-        <h3 data-i18n="contact_title">Contact Our AI Integration Specialists</h3>
-        <div class="contact-grid">
-    <a href="mailto:thwiza@miratech.ma" class="contact-card">
-      <div class="icon-circle">
-        <span class="icon">✉️</span>
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="services_kicker">What we do</span>
+          <h2 data-i18n="services_main_title">Our AI Integration Services</h2>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></div>
+            <h3 data-i18n="service_1_title">AI Assistant Integration</h3>
+            <p data-i18n="service_1_desc">Seamlessly embed intelligent AI assistants into your existing software. We implement ChatGPT, Claude, and custom LLM solutions with enterprise security.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><rect x="9" y="10" width="6" height="5" rx="1"/><path d="M10.5 10V8.5a1.5 1.5 0 0 1 3 0V10"/></svg></div>
+            <h3 data-i18n="service_2_title">Secure AI Implementation</h3>
+            <p data-i18n="service_2_desc">Safety-first approach with data privacy, compliance monitoring, and secure API integration. GDPR and industry-standard compliant solutions.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><path d="M14 4l-4 16"/></svg></div>
+            <h3 data-i18n="service_3_title">Custom AI Development</h3>
+            <p data-i18n="service_3_desc">Build bespoke AI features for your software. From natural language processing to intelligent automation and predictive analytics.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+            <h3 data-i18n="service_4_title">AI Strategy Consulting</h3>
+            <p data-i18n="service_4_desc">Expert guidance on AI adoption. We assess your needs, design AI architecture, and create implementation roadmaps for maximum ROI.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M19 9h3M19 15h3M2 9h3M2 15h3"/></svg></div>
+            <h3 data-i18n="service_5_title">Machine Learning Integration</h3>
+            <p data-i18n="service_5_desc">Integrate ML models for data analysis, pattern recognition, and automated decision-making. From proof-of-concept to production deployment.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></div>
+            <h3 data-i18n="service_6_title">AI Training &amp; Support</h3>
+            <p data-i18n="service_6_desc">Comprehensive training for your team on AI tools and best practices. Ongoing support to optimize and scale your AI solutions.</p>
+          </article>
+        </div>
       </div>
-      <div class="card-text">
-        <span class="label" data-i18n="contact_email_label">Send an Email</span>
-        <span class="value">thwiza@miratech.ma</span>
-      </div>
-    </a>
+    </section>
 
-    <a href="https://wa.me/212636324849" target="_blank" class="contact-card whatsapp-border">
-      <div class="icon-circle whatsapp-bg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24">
+    <section id="why-us" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="why_kicker">Why MiraTech</span>
+          <h2 data-i18n="why_us_title">Why Choose MiraTech for AI Integration?</h2>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <h3 data-i18n="why_1_title">Security-First Approach</h3>
+            <p data-i18n="why_1_desc">We prioritize data protection and implement AI with enterprise-grade security protocols, ensuring your sensitive information stays protected.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3 data-i18n="why_2_title">Experienced Specialists</h3>
+            <p data-i18n="why_2_desc">Our team has deep expertise in AI technologies, software architecture, and secure integration practices across multiple industries.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h3 data-i18n="why_3_title">Proven Implementation</h3>
+            <p data-i18n="why_3_desc">We follow industry best practices and proven methodologies to deliver AI solutions that work reliably in production environments.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+            <h3 data-i18n="why_4_title">Full-Stack Integration</h3>
+            <p data-i18n="why_4_desc">From frontend chatbots to backend AI processing, we handle every aspect of AI integration in your software ecosystem.</p>
+          </article>
+        </div>
       </div>
-      <div class="card-text">
-        <span class="label" data-i18n="contact_whatsapp_label">Chat on WhatsApp</span>
-        <span class="value">+212 6 36 32 48 49</span>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">FAQ</span>
+          <h2 data-i18n="faq_title">Questions fréquentes sur l'intégration d'IA</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item reveal">
+            <h3 data-i18n="faq_q1">Comment intégrer l'IA dans mon site web au Maroc ?</h3>
+            <p data-i18n="faq_a1">L'intégration se fait via des API sécurisées ou des modèles personnalisés. MiraTech vous accompagne dans le choix de la solution la plus adaptée à votre infrastructure locale.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3 data-i18n="faq_q2">Quel est le coût d'un assistant IA pour entreprise ?</h3>
+            <p data-i18n="faq_a2">Le coût dépend de la complexité. Nous proposons des solutions sur mesure allant du simple chatbot à l'intégration complète de LLM sécurisés.</p>
+          </div>
+        </div>
       </div>
-    </a>
-  </div>
-      <p style="margin-top: 1.5rem; color: #666;" data-i18n="contact_footer_text">
-        Get a free consultation on integrating AI assistants into your software. We respond within 24 hours.
-      </p>
-    </div>
-  </section>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <h2 data-i18n="cta_title">Ready to Integrate AI Into Your Software?</h2>
+          <p data-i18n="cta_desc">Let's discuss how AI can transform your business. Our specialists will assess your needs and design a secure implementation plan.</p>
+          <a href="#contact" class="btn" data-i18n="cta_btn">Schedule a Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="contact_kicker">Get in touch</span>
+          <h2 data-i18n="contact_title">Contact Our AI Integration Specialists</h2>
+        </div>
+        <div class="contact-grid">
+          <a href="mailto:thwiza@miratech.ma" class="contact-card reveal">
+            <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="card-text">
+              <span class="label" data-i18n="contact_email_label">Send an Email</span>
+              <span class="value">thwiza@miratech.ma</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/212636324849" target="_blank" rel="noopener" class="contact-card whatsapp-border reveal">
+            <div class="icon-circle whatsapp-bg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></div>
+            <div class="card-text">
+              <span class="label" data-i18n="contact_whatsapp_label">Chat on WhatsApp</span>
+              <span class="value">+212 6 36 32 48 49</span>
+            </div>
+          </a>
+
+          <a href="tel:+212636324849" class="contact-card reveal">
+            <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="card-text">
+              <span class="label" data-i18n="contact_phone_label">Call Us</span>
+              <span class="value">+212 6 36 32 48 49</span>
+            </div>
+          </a>
+        </div>
+        <p class="contact-note reveal" data-i18n="contact_footer_text">Get a free consultation on integrating AI assistants into your software. We respond within 24 hours.</p>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <p data-i18n="footer_rights">© 2025 MiraTech Software Consulting. All rights reserved. | AI Integration Specialists</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/favicon.svg" alt="" width="42" height="42" loading="lazy">
+            <span>Mira<span>Tech</span></span>
+          </a>
+          <p data-i18n="footer_tagline">Software Consulting · AI Integration Specialists in Morocco</p>
+        </div>
+        <div>
+          <h2 data-i18n="footer_nav_title">Explore</h2>
+          <ul>
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 data-i18n="nav_contact">Contact</h2>
+          <ul>
+            <li><a href="mailto:thwiza@miratech.ma">thwiza@miratech.ma</a></li>
+            <li><a href="tel:+212636324849">+212 6 36 32 48 49</a></li>
+            <li><a href="https://wa.me/212636324849" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© <span class="year">2026</span> <span data-i18n="footer_rights">MiraTech Software Consulting. All rights reserved.</span></p>
     </div>
   </footer>
 

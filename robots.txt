@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /js/
-Disallow: /css/
 
 # Sitemap location
 Sitemap: https://miratech.ma/sitemap.xml

@@ -1,0 +1,7 @@
+# Keep repo internals out of the public nginx web root
+.git
+.github
+.dockerignore
+Dockerfile
+deploy.yaml
+argo-app.yaml
