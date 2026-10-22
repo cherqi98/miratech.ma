@@ -594,6 +594,37 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
 }
 
 /* -------------------------------------------------
+   Cookie consent banner
+   ------------------------------------------------- */
+.cookie-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: rgba(4, 21, 48, .97);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .45);
+}
+.cookie-banner p {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: .9rem;
+  color: var(--muted);
+}
+.cookie-actions { display: flex; gap: .6rem; }
+.cookie-actions .btn { padding: .6rem 1.2rem; font: inherit; font-weight: 700; cursor: pointer; }
+
+/* -------------------------------------------------
    Scroll reveal (only when JS is running)
    ------------------------------------------------- */
 .js .reveal {
@@ -656,6 +687,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
   .eyebrow { font-size: .7rem; letter-spacing: .05em; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero-actions .btn { width: 100%; justify-content: center; }
+  .cookie-actions { width: 100%; }
+  .cookie-actions .btn { flex: 1; justify-content: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

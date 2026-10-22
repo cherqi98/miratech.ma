@@ -72,6 +72,11 @@ const translations = {
     footer_tagline: "Conseil logiciel · Intégration d'IA à Témara et partout au Maroc",
     footer_nav_title: "Explorer",
     footer_rights: "MiraTech Software Consulting. Tous droits réservés.",
+    footer_cookies: "Gérer les cookies",
+
+    cookie_text: "Nous utilisons des cookies de mesure d'audience (Google Analytics) pour améliorer notre site. Vous pouvez les accepter ou les refuser.",
+    cookie_accept: "Accepter",
+    cookie_decline: "Refuser",
 
     about_meta_title: "À propos | Experts en intégration IA au Maroc | MiraTech",
     about_eyebrow: "À propos",
@@ -165,6 +170,11 @@ const translations = {
     footer_tagline: "Software Consulting · AI Integration in Temara and across Morocco",
     footer_nav_title: "Explore",
     footer_rights: "MiraTech Software Consulting. All rights reserved.",
+    footer_cookies: "Manage cookies",
+
+    cookie_text: "We use audience measurement cookies (Google Analytics) to improve our website. You can accept or decline them.",
+    cookie_accept: "Accept",
+    cookie_decline: "Decline",
 
     about_meta_title: "About Us | AI Integration Experts in Morocco | MiraTech",
     about_eyebrow: "About us",
